@@ -1,7 +1,6 @@
 <?php
     if(!empty($_POST['kno'])){
         if(!empty($_POST['login']) && !empty($_POST['password'])){
-
             $ip = 'localhost';
             $database = 'stream';
             $user = 'root';
@@ -16,8 +15,14 @@
                 $name = $_POST['name'];
                 $lastname = $_POST['lastname'];
 
-                $mysqli -> query("INSERT INTO `account` VALUES (NULL, '$login','$password', '$name', '$lastname')");
-                include('../html/autorization.html');
+                $info = $mysqli->query("SELECT * FROM `account` WHERE login = '$login'");
+                if($info->num_rows == 1){
+                    include ('../html/reg.html');
+                    echo "Такой логин существует";
+                }else{
+                    $mysqli -> query("INSERT INTO `account` VALUES (NULL, '$login','$password', '$name', '$lastname')");
+                    include('../html/autorization.html');
+                }
                 mysqli_close($mysqli);
             }else{
                 die ('Ошибка подключения');
