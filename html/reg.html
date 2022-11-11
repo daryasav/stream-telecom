@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 70px;
+            text-align: center;
+        }
+        .all{
+            margin-top: 15px;
+        }
+        .ema{
+            margin-left: 19px;
+        }
+        .foorm{
+            margin-top: -10px;
+        }
+        .name{
+            margin-left: 34px;
+        }
+        .pass{
+            margin-left: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Регистрация</h2>
+        <form method="POST" class="foorm" action="/php/registration.php" name="form1">
+            <label>Имя:</label>
+            <input type="text" class="name all" name="name"><br>
+            <label>Фамилия:</label>
+            <input type="text" class="last all" name="lastname"><br>
+            <label>E-mail:</label>
+            <input type="text" class="ema all" name="login"><br>
+            <label>Пароль:</label>
+            <input type="password" class="pass all" name="password"><br>
+            <input type="submit" class="all" name="kno" value="Регистрация"><br><br>
+            <h4>Есть аккаунт?<a href="autorization.html">Авторизация</a></h4>
+        </form>
+    </div>
+
+</body>
+</html>

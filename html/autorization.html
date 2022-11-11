@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 70px;
+            text-align: center;
+        }
+        .all{
+            margin-top: 15px;
+        }
+        .ema{
+            margin-left: 19px;
+        }
+        .pass{
+            margin-left: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Авторизация</h2>
+        <form method="POST" class="form" action="/php/autorize.php" name="form1">
+            <label>E-mail:</label>
+            <input type="text" class="ema all" name="login"><br>
+            <label>Пароль:</label>
+            <input type="password" class="pass all" name="password"><br>
+            <input type="submit" class="all" name="button" value="Войти"><br><br>
+            <h4>Нет аккаунта?<a href="reg.html">Регистрация</a></h4>
+        </form>
+    </div>
+</body>
+</html>
